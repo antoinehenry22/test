@@ -19,11 +19,12 @@ def load_data(nrows):
     data[DATE_COLUMN] = pd.to_datetime(data[DATE_COLUMN])
     return data
 
-t = np.linspace(0,3.14,100),
-y = np.cos(t)
+
 
 chart_data = pd.DataFrame(
-            np.random.randn(20, 3),
+            t=np.linspace(0,2*np.pi,100),
+            np.cos(t),
+            np.cos(2*t)
             columns=['a', 'b', 'c'])
 
 
@@ -31,7 +32,7 @@ data_load_state = st.text('Loading data...')
 data = load_data(10000)
 data_load_state.text("Done! (using st.cache)")
 
-if st.checkbox('Show raw data'):
+if st.checkbox('modulator'):
     st.subheader('RF sigfffnal')
     st.line_chart(chart_data)
 
