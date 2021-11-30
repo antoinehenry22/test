@@ -26,8 +26,7 @@ chart_data = pd.DataFrame(
             np.random.randn(20, 3),
             columns=['a', 'b', 'c'])
 
-datas = pd.DataFrame({'t':t,
-                      'y':y})
+
 data_load_state = st.text('Loading data...')
 data = load_data(10000)
 data_load_state.text("Done! (using st.cache)")
