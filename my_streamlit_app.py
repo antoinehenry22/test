@@ -20,11 +20,7 @@ def load_data(nrows):
     return data
 
 
-t = np.linspace(0,2*np.pi,200)
-x = np.array([t,np.cos(t),np.cos(t)]).T
 
-chart_data = pd.DataFrame(x,
-            columns=['a', 'b', 'c'])
 
 
 data_load_state = st.text('Loading data...')
@@ -32,8 +28,8 @@ data = load_data(10000)
 data_load_state.text("Done! (using st.cache)")
 
 if st.checkbox('modulator'):
-    st.subheader('RF sigfffnal')
-    st.line_chart(chart_data)
+    st.subheader('modulator 1')
+    st.button('EOPM on/off')
 
 st.subheader('Number of pickups by hour')
 hist_values = np.histogram(data[DATE_COLUMN].dt.hour, bins=24, range=(0,24))[0]
