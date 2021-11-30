@@ -23,8 +23,8 @@ t = np.linspace(0,3.14,100),
 y = np.cos(t)
 
 chart_data = pd.DataFrame(
-...     np.random.randn(20, 3),
-...     columns=['a', 'b', 'c'])
+            np.random.randn(20, 3),
+            columns=['a', 'b', 'c'])
 
 datas = pd.DataFrame({'t':t,
                       'y':y})
