@@ -22,7 +22,7 @@ def load_data(nrows):
 t = np.linspace(0,3.14,100),
 y = np.cos(t)
 datas = pd.DataFrame({'t':t,
-                      'y':y)}
+                      'y':y})
 data_load_state = st.text('Loading data...')
 data = load_data(10000)
 data_load_state.text("Done! (using st.cache)")
