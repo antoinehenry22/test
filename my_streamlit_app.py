@@ -20,11 +20,10 @@ def load_data(nrows):
     return data
 
 
+t = np.linspace(0,2*np.pi,200)
+x = np.array([t,np.cos(t),np.cos(t)]).T
 
-chart_data = pd.DataFrame(
-            t=np.linspace(0,2*np.pi,100),
-            np.cos(t),
-            np.cos(2*t),
+chart_data = pd.DataFrame(x,
             columns=['a', 'b', 'c'])
 
 
