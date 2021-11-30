@@ -27,7 +27,7 @@ data_load_state.text("Done! (using st.cache)")
 
 if st.checkbox('Show raw data'):
     st.subheader('RF sigfffnal')
-    st.line_chart(data=(t,y), width=10, height=5, use_container_width=False)
+st.line_chart(data=(t,y), width=10, height=5, use_container_width=False)
 
 st.subheader('Number of pickups by hour')
 hist_values = np.histogram(data[DATE_COLUMN].dt.hour, bins=24, range=(0,24))[0]
