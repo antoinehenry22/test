@@ -24,7 +24,7 @@ def load_data(nrows):
 chart_data = pd.DataFrame(
             t=np.linspace(0,2*np.pi,100),
             np.cos(t),
-            np.cos(2*t)
+            np.cos(2*t),
             columns=['a', 'b', 'c'])
 
 
